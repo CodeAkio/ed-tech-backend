@@ -1,3 +1,4 @@
+import { Student } from '@modules/enrollments/infra/typeorm/entities/Student';
 import { DataSource } from 'typeorm';
 
 const dataSource = new DataSource({
@@ -7,7 +8,7 @@ const dataSource = new DataSource({
   username: 'postgres',
   password: 'postgres',
   database: 'ed_tech',
-  entities: [],
+  entities: [Student],
   migrations: ['src/shared/infra/typeorm/migrations/*.ts'],
 });
 
