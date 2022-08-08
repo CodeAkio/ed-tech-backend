@@ -11,7 +11,8 @@ const dataSource = new DataSource({
   migrations: ['src/shared/infra/typeorm/migrations/*.ts'],
 });
 
-dataSource
-  .initialize()
-  .then(() => console.log('TypeORM initialized!'))
-  .catch((err) => console.log(`Error on initialize TypeORM: ${err}`));
+export function createConnection(host = 'postgres'): Promise<DataSource> {
+  return dataSource.setOptions({ host }).initialize();
+}
+
+export default dataSource;
