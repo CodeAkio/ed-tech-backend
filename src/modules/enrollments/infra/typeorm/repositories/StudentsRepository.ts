@@ -1,6 +1,6 @@
 import { ICreateStudentDTO } from '@modules/enrollments/dtos/ICreateStudentDTO';
 import { IUpdateStudentDTO } from '@modules/enrollments/dtos/IUpdateStudentDTO';
-import { IStudentsRepository } from '@modules/repositories/IStudentsRepository';
+import { IStudentsRepository } from '@modules/enrollments/repositories/IStudentsRepository';
 import { Repository } from 'typeorm';
 
 import dataSource from '@shared/infra/typeorm';
