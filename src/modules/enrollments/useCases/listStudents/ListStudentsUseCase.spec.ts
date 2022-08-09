@@ -2,15 +2,13 @@ import { StudentsRepositoryInMemory } from '@modules/enrollments/repositories/in
 
 import { ListStudentsUseCase } from './ListStudentsUseCase';
 
-let listAvailableCarsUseCase: ListStudentsUseCase;
+let listStudentsUseCase: ListStudentsUseCase;
 let studentsRepositoryInMemory: StudentsRepositoryInMemory;
 
-describe('List Cars', () => {
+describe('List Students', () => {
   beforeEach(() => {
     studentsRepositoryInMemory = new StudentsRepositoryInMemory();
-    listAvailableCarsUseCase = new ListStudentsUseCase(
-      studentsRepositoryInMemory,
-    );
+    listStudentsUseCase = new ListStudentsUseCase(studentsRepositoryInMemory);
   });
 
   it('should be able to list all available students', async () => {
@@ -21,7 +19,7 @@ describe('List Cars', () => {
       ra: '42',
     });
 
-    const students = await listAvailableCarsUseCase.execute();
+    const students = await listStudentsUseCase.execute();
 
     expect(students).toEqual([student]);
   });
