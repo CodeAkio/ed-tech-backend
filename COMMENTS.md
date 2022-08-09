@@ -14,7 +14,12 @@ A arquitetura foi baseada no Clean Architecture, pois implementa boas práticas 
 * [Jest](https://github.com/facebook/jest)
 
 ## O que você melhoraria se tivesse mais tempo
-Coming Soon
+* Recurso de pesquisa de alunos
+* Teste de integração
+* Validação dos dados
+* Autenticação e ACL para que somente pessoas autorizadas possam mexer no sistema
+* Documentação da API com Swagger
+* Cache para lista de alunos com redis
 
 ## Quais requisitos obrigatórios que não foram entregues
-Coming Soon
+Todos foram feitos
